@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  	<modelVersion>4.0.0</modelVersion>
+  	<parent>
+		<groupId>com.fast.boot</groupId>
+    	<artifactId>fast-parent</artifactId>
+    	<version>1.1.0-SNAPSHOT</version>
+  	</parent>
+  
+  	<artifactId>fast-sso</artifactId>
+  
+  	<packaging>jar</packaging>
+  	<name>fast-sso Maven Webapp</name>
+  	<url>http://maven.apache.org</url>
+  	
+  	<dependencies>
+  		<!-- fast-boot -->
+  		<dependency>
+			<groupId>com.fast.boot</groupId>
+			<artifactId>fast-boot</artifactId>
+			<version>1.1.0-SNAPSHOT</version>
+		</dependency>
+  		<!-- springboot -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+			<optional>true</optional>
+		</dependency>
+    	<dependency>
+       		<groupId>org.springframework.boot</groupId>
+       		<artifactId>spring-boot-starter-web</artifactId>
+    	</dependency>
+    	<!-- 引入 spring-boot-starter-actuator 监控需要-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!-- alibaba fastjson httpclient   -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.session</groupId>
+			<artifactId>spring-session-data-redis</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+		<dependency>
+		    <groupId>redis.clients</groupId>
+		    <artifactId>jedis</artifactId>
+		</dependency>
+		<!-- test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	    <dependency>
+	      	<groupId>junit</groupId>
+	      	<artifactId>junit</artifactId>
+	      	<scope>test</scope>
+	    </dependency>
+  	</dependencies>
+  	<build>
+    	<finalName>fast-sso</finalName>
+  	</build>
+</project>
